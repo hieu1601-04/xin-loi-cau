@@ -11,96 +11,87 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <style>
-      .title span {
-        font-size: 1.5em;
-      }
-    </style>
-    <title>Valentine</title>
+    <title>Xin lỗi cậu</title>
   </head>
   <body>
     <main class="container">
       <img
-  class="cat-img"
-  src="https://media.giphy.com/media/SVkhYVCi8fKPKvypi6/giphy.gif"
-  alt="Picture of a cat"
-  data-aos="zoom-in"
-/>
-<p class="title" data-aos="fade-up" data-aos-delay="200">
-  "Ngân dễ thw" ơi choo tớ xinn lỗi nhóooo😭<br /><span
-    >Cậu hong chọn hoặc thoát là tha lỗi cho tớ đó</span
-  >
-</p>
-<div class="buttons" data-aos="fade-up" data-aos-delay="400">
-  <button type="button" class="btn btn--yes">Chấp nhận</button>
-  <button type="button" class="btn btn--no">Không bao giờ</button>
-</div>
+        class="cat-img"
+        src="https://media.giphy.com/media/SVkhYVCi8fKPKvypi6/giphy.gif"
+        alt="Picture of a cat"
+        data-aos="zoom-in"
+      />
+      <p class="title" data-aos="fade-up" data-aos-delay="200">
+        "Ngân dễ thw" ơi choo tớ xinn lỗi nhóooo😭<br />
+        <span>Cậu hông chọn hoặc thoát là tha lỗi cho tớ đó</span>
+      </p>
+      <div class="buttons" data-aos="fade-up" data-aos-delay="400">
+        <button type="button" class="btn btn--yes">Chấp nhận</button>
+        <button type="button" class="btn btn--no">Không bao giờ</button>
+      </div>
     </main>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="script.js"></script>
-  
-<style>
-  .heart {
-    position: fixed;
-    top: -10px;
-    width: 20px;
-    height: 20px;
-    background: red;
-    transform: rotate(45deg);
-    animation: fall 5s linear infinite;
-    opacity: 0.8;
-    z-index: 1000;
-  }
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-  .heart::before,
-  .heart::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: red;
-    border-radius: 50%;
-  }
+    <style>
+      .heart {
+        position: fixed;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        background: red;
+        transform: rotate(45deg);
+        animation: fall 5s linear infinite;
+        opacity: 0.8;
+        z-index: 1000;
+      }
 
-  .heart::before {
-    top: -10px;
-    left: 0;
-  }
+      .heart::before,
+      .heart::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+      }
 
-  .heart::after {
-    left: -10px;
-    top: 0;
-  }
+      .heart::before {
+        top: -10px;
+        left: 0;
+      }
 
-  @keyframes fall {
-    0% {
-      top: -10px;
-      opacity: 1;
-    }
-    100% {
-      top: 110%;
-      opacity: 0;
-    }
-  }
-</style>
+      .heart::after {
+        left: -10px;
+        top: 0;
+      }
 
-<script>
-  setInterval(() => {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = 3 + Math.random() * 2 + "s";
-    document.body.appendChild(heart);
+      @keyframes fall {
+        0% {
+          top: -10px;
+          opacity: 1;
+        }
+        100% {
+          top: 110%;
+          opacity: 0;
+        }
+      }
+    </style>
 
-    setTimeout(() => heart.remove(), 5000);
-  }, 300);
-</script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
+    <script>
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 5000);
+      }, 300);
+    </script>
   </body>
 </html>
